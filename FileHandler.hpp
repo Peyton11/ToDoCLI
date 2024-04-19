@@ -1,0 +1,5 @@
+/*
+    FileHandler.hpp
+
+    Interface file for FileHandler class.
+*/
