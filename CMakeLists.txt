@@ -11,7 +11,7 @@ project(ToDoCLI)
 set(CMAKE_CXX_STANDARD 20)
 
 # Add executable and specify source files
-add_executable(ToDoCLI main.cpp ToDoList.cpp FileHandler.cpp UserInputHandler.cpp)
+add_executable(ToDoCLI ToDoCLI.cpp ToDoList.cpp FileHandler.cpp UserIOHandler.cpp)
 
 # Custom target to run the program
 add_custom_target(run

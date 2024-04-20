@@ -1,9 +1,18 @@
 /*
-    UserInputHandler.hpp
+    UserIOHandler.hpp
 
-    Interface file for UserInputHandler class. Responsible for interacting with the user. Deals with user input/output.
+    Interface file for UserIOHandler class. Responsible for interacting with the user. Deals with user input/output.
 */
 
-class UserIOHandler {
+#ifndef USERIOHANDLER_HPP
+#define USERIOHANDLER_HPP
 
+#include "ToDoList.hpp"
+
+class UserIOHandler {
+public:
+    // List all tasks in to-do list
+    void displayToDoList(const ToDoList& toDoList) const;
 };
+
+#endif

@@ -9,17 +9,13 @@
 #include <vector>
 #include <string>
 
-void ToDoList::output() const {
-    std::vector<std::string>::const_iterator begin = entries.begin();
-    std::vector<std::string>::const_iterator end = entries.end();
-    int index = 1;
-
-    for (auto p = begin; p != end; ++p) {
-        std::cout << '[' << index << "] " << *p << '\n';
-    }
+// Get tasks
+std::vector<std::string> ToDoList::getTasks() const {
+    return tasks;
 }
 
-void ToDoList::addEntry(const std::string& entry) {
-    entries.push_back(entry);
+// Add task to to-do list
+void ToDoList::addTask(const std::string& entry) {
+    tasks.push_back(entry);
     ++items;
 }
