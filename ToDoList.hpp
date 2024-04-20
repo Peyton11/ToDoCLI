@@ -1,7 +1,7 @@
 /*
     ToDoList.hpp
 
-    Interface file for ToDoList class.
+    Interface file for ToDoList class. Responsible for managing tasks. E.g. adding, removing, and updating.
 */
 
 #include <vector>

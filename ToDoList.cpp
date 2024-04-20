@@ -1,7 +1,7 @@
 /*
     ToDoList.cpp
 
-    Implementation file for ToDoList class.
+    Implementation file for ToDoList class. Responsible for managing tasks. E.g. adding, removing, and updating.
 */
 
 #include "ToDoList.hpp"
