@@ -35,11 +35,15 @@ int main(int argc, char* argv[]) {
     std::string command = argv[1];
     if (command == "list") {
         userIOHandler.displayToDoList(toDoList);
+
     } else if (command == "add") {
         // Add argument to to-do list
         toDoList.addTask(argv[2]);
+
     } else if (command == "delete") {
         // Delete task from to-do list
+        toDoList.deleteTask(argv[2]);
+
     } else if (command == "modify") {
         // Modify task in to-do list
     } else {

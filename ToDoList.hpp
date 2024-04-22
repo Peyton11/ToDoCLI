@@ -18,6 +18,9 @@ public:
     // Add task to to-do list
     void addTask(const std::string& entry);
 
+    // Delete task from to-do list
+    void deleteTask(const std::string& taskNumber);
+
 private:
     int items = 0;
     std::vector<std::string> tasks;

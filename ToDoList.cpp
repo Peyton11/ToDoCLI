@@ -19,3 +19,10 @@ void ToDoList::addTask(const std::string& entry) {
     tasks.push_back(entry);
     ++items;
 }
+
+// Delete task from to-do list
+void ToDoList::deleteTask(const std::string& taskNumber) {
+    // Iterator that points to the task that will be deleted
+    auto position = tasks.begin() + std::stoi(taskNumber) - 1;
+    tasks.erase(position);
+}
