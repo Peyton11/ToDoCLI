@@ -18,6 +18,9 @@ public:
     // Set tasks
     void setTasks(std::string& content);
 
+    // Display to-do list
+    void display() const;
+
     // Clear to-do list
     void clear();
 

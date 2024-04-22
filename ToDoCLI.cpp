@@ -5,7 +5,6 @@
 */
 
 #include "ToDoList.hpp"
-#include "UserIOHandler.hpp"
 #include "FileHandler.hpp"
 #include <iostream>
 
@@ -13,7 +12,6 @@ int main(int argc, char* argv[]) {
 
     // Instantiate objects for ToDoCLI application
     ToDoList toDoList;
-    UserIOHandler userIOHandler;
     FileHandler fileHandler;
 
     // Where to write to file
@@ -38,7 +36,7 @@ int main(int argc, char* argv[]) {
     // Second argument from the CLI. In the format: "todo <command> [argument]". User can list, add, delete, and modify tasks
     std::string command = argv[1];
     if (command == "list") {
-        userIOHandler.displayToDoList(toDoList);
+        toDoList.display();
 
     } else if (command == "clear") {
         // Clear to-do list

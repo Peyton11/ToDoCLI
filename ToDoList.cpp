@@ -26,6 +26,17 @@ void ToDoList::setTasks(std::string& content) {
         tasks.push_back(line);
 }
 
+// Display all tasks in to-do list
+void ToDoList::display() const {
+
+    std::cout << "To-Do List:\n";
+    int taskNumber = 1; 
+    for (const auto& task : tasks) {
+        std::cout << '[' << taskNumber << "] " << task << '\n';
+        ++taskNumber; 
+    }
+}
+
 // Clear to-do list
 void ToDoList::clear() {
     tasks.clear();
