@@ -40,6 +40,10 @@ int main(int argc, char* argv[]) {
     if (command == "list") {
         userIOHandler.displayToDoList(toDoList);
 
+    } else if (command == "clear") {
+        // Clear to-do list
+        toDoList.clear();
+
     } else if (command == "add") {
         // Add argument to to-do list
         toDoList.addTask(argv[2]);

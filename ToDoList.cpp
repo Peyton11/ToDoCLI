@@ -26,6 +26,11 @@ void ToDoList::setTasks(std::string& content) {
         tasks.push_back(line);
 }
 
+// Clear to-do list
+void ToDoList::clear() {
+    tasks.clear();
+}
+
 // Add task to to-do list
 void ToDoList::addTask(const std::string& entry) {
     tasks.push_back(entry);

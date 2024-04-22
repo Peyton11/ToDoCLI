@@ -18,6 +18,9 @@ public:
     // Set tasks
     void setTasks(std::string& content);
 
+    // Clear to-do list
+    void clear();
+
     // Add task to to-do list
     void addTask(const std::string& entry);
 
