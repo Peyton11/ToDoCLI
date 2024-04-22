@@ -1,7 +1,7 @@
 /*
     ToDoList.hpp
 
-    Interface file for ToDoList class. Responsible for managing tasks. E.g. adding, removing, and updating.
+    Interface file for ToDoList class. Responsible for managing tasks. E.g. adding, removing, modifying, etc.
 */
 
 #ifndef TODOLIST_HPP
@@ -37,7 +37,6 @@ public:
     void modifyTask(const std::string& taskNumber);
 
 private:
-    int items = 0;
     std::vector<std::string> tasks;
 };
 

@@ -21,25 +21,26 @@ int main(int argc, char* argv[]) {
     std::string content = fileHandler.read();
     toDoList.setTasks(content);
 
-    // Invalid format
+    // Invalid format. No arguments given
     if (argc < 2) {
         std::cerr << "Usage: " << argv[0] << " <command> [argument]\n";
         return 1;
     }
 
-    // Too many arguments. There should be exactly three
+    // Too many arguments
     if (argc > 3) {
         std::cerr << "Too many arguments: " << argc << '\n';
         return 1;
     }
 
-    // Second argument from the CLI. In the format: "todo <command> [argument]". User can list, add, delete, and modify tasks
+    // Second argument from the CLI. In the format: "todo <command> [argument]"
     std::string command = argv[1];
     if (command == "help") {
         // Show user all commands and how to use them
         toDoList.showHelp();
 
     } else if (command == "list") {
+        // Display to-do list
         toDoList.display();
 
     } else if (command == "clear") {
@@ -63,7 +64,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    // Write to-do list to an external file for later use
+    // Write list to an external file for later use
     fileHandler.write(toDoList);
 
     return 0;
