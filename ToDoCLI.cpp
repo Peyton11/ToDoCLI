@@ -56,6 +56,8 @@ int main(int argc, char* argv[]) {
 
     } else if (command == "modify") {
         // Modify task in to-do list
+        toDoList.modifyTask(argv[2]);
+
     } else {
         std::cerr << "Invalid command: " << command << '\n';
         return 1;

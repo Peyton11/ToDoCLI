@@ -33,6 +33,9 @@ public:
     // Delete task from to-do list
     void deleteTask(const std::string& taskNumber);
 
+    // Modify task in to-do list
+    void modifyTask(const std::string& taskNumber);
+
 private:
     int items = 0;
     std::vector<std::string> tasks;

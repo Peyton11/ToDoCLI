@@ -65,3 +65,16 @@ void ToDoList::deleteTask(const std::string& taskNumber) {
     auto position = tasks.begin() + std::stoi(taskNumber) - 1;
     tasks.erase(position);
 }
+
+// Modify task in to-do list
+void ToDoList::modifyTask(const std::string& taskNumber) {
+
+    // User inputs updated task
+    std::string updatedTask = "";
+    std::cout << "Updated task: ";
+    std::getline(std::cin, updatedTask);
+
+    // Replace old task with new task
+    auto index = std::stoi(taskNumber) - 1;
+    tasks.at(index) = updatedTask;
+}
