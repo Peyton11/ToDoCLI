@@ -18,6 +18,9 @@ public:
     // Set tasks
     void setTasks(std::string& content);
 
+    // Display all commands and how to use them
+    void showHelp() const;
+
     // Display to-do list
     void display() const;
 

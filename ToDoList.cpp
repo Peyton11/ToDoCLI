@@ -26,14 +26,25 @@ void ToDoList::setTasks(std::string& content) {
         tasks.push_back(line);
 }
 
+    // Display all commands and how to use them
+    void ToDoList::showHelp() const {
+        std::cout << "Usage: todo <command> [argument]\n";
+        std::cout << "commands:\n";
+        std::cout << "\tlist: display to-do list\n";
+        std::cout << "\tclear: clear entire to-do list\n";
+        std::cout << "\tadd: add task to to-do list\n";
+        std::cout << "\tdelete: remove task from to-do list\n";
+        std::cout << "\tmodify: modify task in to-do list\n";
+    }
+
 // Display all tasks in to-do list
 void ToDoList::display() const {
 
     std::cout << "To-Do List:\n";
-    int taskNumber = 1; 
+    int taskNumber = 1;
     for (const auto& task : tasks) {
         std::cout << '[' << taskNumber << "] " << task << '\n';
-        ++taskNumber; 
+        ++taskNumber;
     }
 }
 

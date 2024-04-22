@@ -35,7 +35,11 @@ int main(int argc, char* argv[]) {
 
     // Second argument from the CLI. In the format: "todo <command> [argument]". User can list, add, delete, and modify tasks
     std::string command = argv[1];
-    if (command == "list") {
+    if (command == "help") {
+        // Show user all commands and how to use them
+        toDoList.showHelp();
+
+    } else if (command == "list") {
         toDoList.display();
 
     } else if (command == "clear") {
