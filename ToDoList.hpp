@@ -15,6 +15,9 @@ public:
     // Get tasks
     std::vector<std::string> getTasks() const;
 
+    // Set tasks
+    void setTasks(std::string& content);
+
     // Add task to to-do list
     void addTask(const std::string& entry);
 

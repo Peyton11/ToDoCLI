@@ -15,6 +15,9 @@ public:
     // Initialize file name
     void setFileName(std::string name);
 
+    // Read from file
+    std::string read();
+
     // Write to file
     void write(const ToDoList& toDoList) const;
 

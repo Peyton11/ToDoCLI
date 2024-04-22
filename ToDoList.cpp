@@ -8,10 +8,22 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <sstream>
 
 // Get tasks
 std::vector<std::string> ToDoList::getTasks() const {
     return tasks;
+}
+
+// Set tasks
+void ToDoList::setTasks(std::string& content) {
+
+    // convert std::string to input file stream. Read line by line to append to vector
+    std::istringstream iss (content);
+    std::string line = "";
+
+    while (std::getline(iss, line))
+        tasks.push_back(line);
 }
 
 // Add task to to-do list

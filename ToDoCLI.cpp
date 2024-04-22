@@ -19,6 +19,10 @@ int main(int argc, char* argv[]) {
     // Where to write to file
     fileHandler.setFileName("ToDoList.txt");
 
+    // Read in tasks from file and initialize to-do list
+    std::string content = fileHandler.read();
+    toDoList.setTasks(content);
+
     // Invalid format
     if (argc < 2) {
         std::cerr << "Usage: " << argv[0] << " <command> [argument]\n";
@@ -50,14 +54,6 @@ int main(int argc, char* argv[]) {
         std::cerr << "Invalid command: " << command << '\n';
         return 1;
     }
-
-    // Add tasks to to-do list
-    toDoList.addTask("Project v4handler");
-    toDoList.addTask("Statistics HW");
-    toDoList.addTask("Calculus HW");
-
-    // Output to-do list
-    userIOHandler.displayToDoList(toDoList);
 
     // Write to-do list to an external file for later use
     fileHandler.write(toDoList);
