@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Second argument from the CLI. In the format: "todo <command> [argument]"
-    auto command = argv[1];
+    std::string command = argv[1];
     if (command == "help") {
         // Show user all commands and how to use them
         toDoList.showHelp();
