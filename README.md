@@ -7,7 +7,7 @@ The ToDoCLI program is a simple command-line interface application designed to h
 **Modify Tasks**: Modify tasks that need changed.\
 **Display Tasks**: View all tasks in your todo list.\
 **Clear Tasks**: Clear your todo list.\
-**Save and Load**: Your todo list is automatically saved for future use.\
+**Save and Load**: Your todo list is automatically saved for future use.
 
 ## Installation
 1. Clone the repository to your local machine:
