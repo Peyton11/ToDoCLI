@@ -16,7 +16,7 @@ public:
     std::vector<std::string> getTasks() const;
 
     // Set tasks
-    void setTasks(std::string& content);
+    void setTasks(const std::string& content);
 
     // Display all commands and how to use them
     void showHelp() const;

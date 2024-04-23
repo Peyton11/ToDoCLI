@@ -18,7 +18,7 @@ void FileHandler::setFileName(std::string name) {
 }
 
 // Read from file
-std::string FileHandler::read() {
+std::string FileHandler::read() const {
 
     // Read file content into content string
     std::string content;

@@ -16,7 +16,7 @@ std::vector<std::string> ToDoList::getTasks() const {
 }
 
 // Set tasks
-void ToDoList::setTasks(std::string& content) {
+void ToDoList::setTasks(const std::string& content) {
 
     // convert std::string to input file stream. Read line by line to append to vector
     std::istringstream iss (content);
@@ -26,16 +26,17 @@ void ToDoList::setTasks(std::string& content) {
         tasks.push_back(line);
 }
 
-    // Display all commands and how to use them
-    void ToDoList::showHelp() const {
-        std::cout << "Usage: todo <command> [argument]\n";
-        std::cout << "commands:\n";
-        std::cout << "\tlist: display to-do list\n";
-        std::cout << "\tclear: clear entire to-do list\n";
-        std::cout << "\tadd: add task to to-do list\n";
-        std::cout << "\tdelete: remove task from to-do list\n";
-        std::cout << "\tmodify: modify task in to-do list\n";
-    }
+// Display all commands and how to use them
+void ToDoList::showHelp() const {
+
+    std::cout << "Usage: todo <command> [argument]\n";
+    std::cout << "commands:\n";
+    std::cout << "\tlist: display to-do list\n";
+    std::cout << "\tclear: clear entire to-do list\n";
+    std::cout << "\tadd: add task to to-do list\n";
+    std::cout << "\tdelete: remove task from to-do list\n";
+    std::cout << "\tmodify: modify task in to-do list\n";
+}
 
 // Display all tasks in to-do list
 void ToDoList::display() const {
@@ -60,6 +61,7 @@ void ToDoList::addTask(const std::string& entry) {
 
 // Delete task from to-do list
 void ToDoList::deleteTask(const std::string& taskNumber) {
+
     // Iterator that points to the task that will be deleted
     auto position = tasks.begin() + std::stoi(taskNumber) - 1;
     tasks.erase(position);

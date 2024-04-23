@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
     FileHandler fileHandler("ToDoList.txt");
 
     // Read in tasks from file and initialize to-do list
-    std::string content = fileHandler.read();
+    auto content = fileHandler.read();
     toDoList.setTasks(content);
 
     // Invalid format. No arguments given
@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Second argument from the CLI. In the format: "todo <command> [argument]"
-    std::string command = argv[1];
+    auto command = argv[1];
     if (command == "help") {
         // Show user all commands and how to use them
         toDoList.showHelp();

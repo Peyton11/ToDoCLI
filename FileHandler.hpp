@@ -12,7 +12,6 @@
 
 class FileHandler {
 public:
-
     // Constructor initializes fileName
     FileHandler(std::string name);
 
@@ -20,7 +19,7 @@ public:
     void setFileName(std::string name);
 
     // Read from file
-    std::string read();
+    std::string read() const;
 
     // Write to file
     void write(const ToDoList& toDoList) const;
