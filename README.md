@@ -40,7 +40,7 @@ make
 ./todo <command> [argument]
 ```
 
-### Commands
+## Commands
 - help
 - list
 - clear
