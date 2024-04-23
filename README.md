@@ -19,7 +19,7 @@ git clone https://github.com/Peyton11/ToDoCLI.git
 cd ToDoCLI
 ```
 
-3. Make a build directory and navigate to it:\
+3. Make a build directory and navigate to it:
 ```
 mkdir build
 cd build
