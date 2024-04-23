@@ -12,10 +12,7 @@ int main(int argc, char* argv[]) {
 
     // Instantiate objects for ToDoCLI application
     ToDoList toDoList;
-    FileHandler fileHandler;
-
-    // Where to write to file
-    fileHandler.setFileName("ToDoList.txt");
+    FileHandler fileHandler("ToDoList.txt");
 
     // Read in tasks from file and initialize to-do list
     std::string content = fileHandler.read();

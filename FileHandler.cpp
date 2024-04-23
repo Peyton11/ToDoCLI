@@ -8,7 +8,11 @@
 #include <iostream>
 #include <fstream>
 
-// Initialize file name
+// Constructor initializes fileName
+FileHandler::FileHandler(std::string name)
+    : fileName(name) {}
+
+// Initialize fileName
 void FileHandler::setFileName(std::string name) {
     fileName = name;
 }
@@ -31,9 +35,9 @@ std::string FileHandler::read() {
 
 // Write to file
 void FileHandler::write(const ToDoList& toDoList) const {
+
     std::ofstream fout;
     fout.open(fileName);
-    
     for (const auto& task: toDoList.getTasks()) {
         fout << task << '\n';
     }

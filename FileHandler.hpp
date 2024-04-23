@@ -12,7 +12,11 @@
 
 class FileHandler {
 public:
-    // Initialize file name
+
+    // Constructor initializes fileName
+    FileHandler(std::string name);
+
+    // Initialize fileName
     void setFileName(std::string name);
 
     // Read from file
