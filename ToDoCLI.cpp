@@ -43,13 +43,16 @@ int main(int argc, char* argv[]) {
     } else if (command == "clear") {
         // Clear to-do list
         toDoList.clear();
+        std::cout << "To-do list cleared.\n";
 
     } else if (command == "add") {
         // Add argument to to-do list
+        std::cout << '"' << argv[2] << "\" has been added to the list.\n";
         toDoList.addTask(argv[2]);
 
     } else if (command == "delete") {
         // Delete task from to-do list
+        std::cout << '"' << toDoList.getTask(argv[2]) << "\" has been deleted from the list.\n";
         toDoList.deleteTask(argv[2]);
 
     } else if (command == "modify") {

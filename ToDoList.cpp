@@ -15,6 +15,12 @@ std::vector<std::string> ToDoList::getTasks() const {
     return tasks;
 }
 
+// Get specific task
+std::string ToDoList::getTask(const std::string& taskNumber) {
+    int index = std::stoi(taskNumber) - 1;
+    return tasks.at(index);
+}
+
 // Set tasks
 void ToDoList::setTasks(const std::string& content) {
 
