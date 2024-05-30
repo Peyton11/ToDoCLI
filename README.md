@@ -48,7 +48,7 @@ make
 - delete
 - modify
 
-When adding a task, be sure to use quotation marks. For example: `todo add "Calculus Homework"`\
-When deleting or modifying a task, specify the task number. For example: `todo delete 1`\
-To display list: `todo list`\
-To clear list: `todo clear`
+When adding a task, be sure to use quotation marks. For example: `./todo add "Calculus Homework"`\
+When deleting or modifying a task, specify the task number. For example: `./todo delete 1`\
+To display list: `./todo list`\
+To clear list: `./todo clear`
